@@ -139,7 +139,8 @@
 }
 
 .topbar a:hover {
-  color: #ffd24d;
+  color: #e4ec0d;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* LEFT */
@@ -230,7 +231,7 @@
     margin-left: 8px;
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
         visibility: hidden;
@@ -255,7 +256,7 @@
     background: var(--bs-light);
     transition: .5s;
     opacity: 1;
-}
+} */
 
 @media (max-width: 991.98px) {
     .sticky-top.navbar-light {
@@ -331,95 +332,95 @@
         display: none;
     }
 }
+/* Hide all dropdowns initially */
+.navbar .dropdown-menu {
+  display: none;
+}
+/* Show first-level dropdown only on hover */
+.navbar .dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* ---------- MULTI LEVEL DROPDOWN FIX ---------- */
+
 
 .dropdown-submenu {
   position: relative;
 }
 
-.dropdown-submenu > .submenu {
-  position: absolute !important;
+/* Hide submenu */
+.dropdown-submenu > .dropdown-menu {
+  position: absolute;
   top: 0;
   left: 100%;
-  margin-left: 0.2rem;
+  margin-left: 0.25rem;
+  min-width: 240px;
   display: none;
-  white-space: nowrap;
-  z-index: 1000;
+  z-index: 1050;
 }
 
-/* show only on hover */
-.dropdown-submenu:hover > .submenu {
+/* Show submenu ONLY when hovered */
+.dropdown-submenu:hover > .dropdown-menu {
   display: block;
 }
-/* Main About dropdown width */
-.about-dropdown {
-  min-width: 260px;   /* adjust as needed */
+
+/* ===== DROPDOWN HOVER BACKGROUND ===== */
+
+/* Normal dropdown items */
+
+
+/* Hover effect */
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--bs-primary); /* 🔵 Blue */
+  color: #fff;
 }
 
-/* Make items full width */
-.about-dropdown .dropdown-item {
+/* Keep hover active when submenu is open */
+.dropdown-submenu:hover > .dropdown-item {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+
+/* Main dropdown width */
+.dropdown-menu {
+  min-width: 260px;
+  border-radius: 0.6rem;
+  overflow: visible;
+}
+
+/* Dropdown item layout */
+.dropdown-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-/* Submenu width */
-.dropdown-submenu > .submenu {
-  min-width: 240px;
-}
-
-
-
-
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu > .submenu {
-  position: absolute !important;
-  top: 0;
-  left: 100%;
-  margin-left: 0.2rem;
-  display: none;
   white-space: nowrap;
 }
 
-/* show submenu on hover */
-.dropdown-submenu:hover > .submenu {
-  display: block;
+/* Arrow icon size */
+.dropdown-item span {
+  font-size: 12px;
+  margin-left: 10px;
 }
-
-/* smooth UX */
-.dropdown-menu {
-  border-radius: 0.6rem;
-}
-.submenu.show {
-  display: block;
-}
-/* hide all submenus by default */
-.dropdown-submenu > .submenu {
+.dropdown-menu.show {
   display: none !important;
-  position: absolute !important;
+}
+/* Default submenu (right side) */
+.dropdown-submenu > .dropdown-menu {
   top: 0;
   left: 100%;
-  margin-left: 0.2rem;
-  white-space: nowrap;
-  z-index: 1000;
 }
 
-/* show submenu ONLY on hover */
-.dropdown-submenu:hover > .submenu {
-  display: block !important;
+/* OPEN UPWARD for Facilities */
+.dropdown-submenu-up > .dropdown-menu {
+  bottom: 0;
+  top: auto;
 }
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu .submenu.show {
-  display: none !important;
+.dropdown-submenu-up > .dropdown-item span {
+  transform: rotate(-90deg);
+  display: inline-block;
 }
 
-.dropdown-submenu:hover .submenu.show {
-  display: block !important;
-}
+
 
 
 
@@ -1404,17 +1405,17 @@
 
 
 /* Brand colors */
-.twitter:hover { background: #1da1f2;color: #000;
+.twitter:hover { background: #1da1f2;color: #f9f5f5;
   transform: scale(1.15);}
-.facebook:hover { background: #1877f2;color: #000;
+.facebook:hover { background: #0852b2;color: #f9f4f4;
   transform: scale(1.15); }
-.linkedin:hover { background: #0a66c2;color: #000;
+.linkedin:hover { background: #344cc4;color: #f9f8f8;
   transform: scale(1.15); }
-.instagram:hover { background: #e4405f; color: #000;
+.instagram:hover { background:#dd2a7b; color: #f8f1f1;
   transform: scale(1.15);}
-.youtube:hover { background: #ff0000;color: #000;
+.youtube:hover { background: #f6f0f0;color: #f51414;
   transform: scale(1.15); }
-.github:hover { background: #000;color: #000;
+.github:hover { background: #000;color: #eeeaea;
   transform: scale(1.15); }
 
   /**social media icons end**/
