@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVR Engineering College</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+@font-face {
+    font-family: 'PanAmTextCaps';
+    src: url('./fonts/PanAmTextCaps-Regular.ttf') format('truetype');
+}
+
+/* Remove all default spacing */
+html, body{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header-section{
+    height:150px;
+    display:flex;
+    align-items:center;
+    padding:0 1%;
+}
+
+/* Remove Bootstrap gutter */
+.row{
+    --bs-gutter-x: 0rem;
+    margin:0;
+    width:100%;
+}
+
+/* Reduce column padding (tight layout) */
+.col-lg-2{
+    padding-left:4px !important;
+    padding-right:4px !important;
+}
+
+.col-lg-8{
+    padding-left:4px !important;
+    padding-right:4px !important;
+}
+
+/* Remove default margins */
+h1, h2, h3, p, div{
+    margin:0;
+}
+
+/* LEFT LOGO */
+.college-logo{
+    max-height:105px;
+}
+
+/* COLLEGE NAME */
+.college-name{
+    font-family:'PanAmTextCaps';
+    font-size: clamp(20px, 4vw, 52px);
+    color:#2f3b8f;
+    letter-spacing:2px;
+    white-space:nowrap;
+    line-height:1;
+}
+
+/* AUTONOMOUS */
+.autonomous-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+}
+
+.green-line{
+    width:120px;
+    height:4px;
+    background:#2e7d32;
+}
+
+.autonomous{
+    color:#ff0000;
+    font-weight:bold;
+    font-size:22px;
+    margin:0 10px;
+}
+
+/* APPROVAL TEXT */
+.approval-text{
+    font-size:12px;
+    font-weight:600;
+    line-height:1.2;
+    margin-top:2px;
+}
+
+/* ADDRESS */
+.address{
+    font-weight:800;
+    font-size:18px;
+    margin-top:2px;
+}
+
+/* RIGHT SECTION */
+.logo-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+}
+
+.small-logo{
+    height:55px;          /* reduced logo size */
+    margin:0 -3px;        /* tight spacing */
+}
+
+.counselling-label{
+    font-size:15px;
+    color:#2f3b8f;
+    font-weight:600;
+    text-align:center;
+}
+
+.counselling-code{
+    font-size:26px;
+    font-weight:900;
+    color:#2f3b8f;
+    text-align:center;
+}
+
+/* Responsive */
+@media (max-width:992px){
+
+    .header-section{
+        height:auto;
+        padding:15px 10px;
+    }
+
+    .college-name{
+        font-size:28px;
+        white-space:normal;
+    }
+
+    .autonomous{
+        font-size:16px;
+    }
+
+    .approval-text{
+        display:none;   /* hide approval on small screens */
+    }
+
+    .address{
+        font-size:14px;
+    }
+
+    .small-logo{
+        height:38px;
+        margin:0 -2px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid header-section" id="siteHeader">
+
+
+<div class="row align-items-center text-center">
+
+    <!-- LEFT -->
+    <div class="col-12 col-lg-2 text-center text-lg-end">
+        <img src="/web_ribbon/logo.png" class="img-fluid college-logo">
+        <div class="fw-bold small">ESTD : 2007</div>
+    </div>
+
+    <!-- CENTER -->
+    <div class="col-12 col-lg-8">
+
+        <div class="college-name">
+            SVR ENGINEERING COLLEGE
+        </div>
+
+        <div class="autonomous-row">
+            <div class="green-line"></div>
+            <div class="autonomous">(AUTONOMOUS)</div>
+            <div class="green-line"></div>
+        </div>
+
+        <!-- <div class="approval-text d-none d-lg-block">
+            Approved by AICTE, New Delhi; Included under Sections 2(f) and 12(B) of the UGC Act 1956;
+            Affiliated to JNTUA, Ananthapuramu.<br>
+            Accredited by NAAC of UGC; UG-CSE and UG-ECE are Accredited by NBA of AICTE;
+            ISO: 9001:2015 Certified Institution.
+        </div> -->
+
+        <div class="address">
+            AYYALUR METTA, NANDYAL (Dt) - 518 502, A.P.
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="col-12 col-lg-2 d-none d-lg-block">
+
+        <div class="logo-row mb-1">
+            <img src="/web_ribbon/nba.png" class="small-logo">
+            <img src="/web_ribbon/naac.png" class="small-logo">
+            <img src="/web_ribbon/ugc.png" class="small-logo">
+        </div>
+
+        <div class="counselling-label">Counselling Code</div>
+        <div class="counselling-code">ASVR</div>
+
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>

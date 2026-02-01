@@ -1,0 +1,152 @@
+
+@font-face {
+    font-family: 'PanAmTextCaps';
+    src: url('./fonts/PanAmTextCaps-Regular.ttf') format('truetype');
+}
+
+/* Remove all default spacing */
+html, body{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header-section{
+    height:150px;
+    display:flex;
+    align-items:center;
+    padding:0 1%;
+}
+
+/* Remove Bootstrap gutter */
+.row{
+    --bs-gutter-x: 0rem;
+    margin:0;
+    width:100%;
+}
+
+/* Reduce column padding (tight layout) */
+.col-lg-2{
+    padding-left:4px !important;
+    padding-right:4px !important;
+}
+
+.col-lg-8{
+    padding-left:4px !important;
+    padding-right:4px !important;
+}
+
+/* Remove default margins */
+h1, h2, h3, p, div{
+    margin:0;
+}
+
+/* LEFT LOGO */
+.college-logo{
+    max-height:105px;
+}
+
+/* COLLEGE NAME */
+.college-name{
+    font-family:'PanAmTextCaps';
+    font-size: clamp(20px, 4vw, 52px);
+    color:#2f3b8f;
+    letter-spacing:2px;
+    white-space:nowrap;
+    line-height:1;
+}
+
+/* AUTONOMOUS */
+.autonomous-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+}
+
+.green-line{
+    width:120px;
+    height:4px;
+    background:#2e7d32;
+}
+
+.autonomous{
+    color:#ff0000;
+    font-weight:bold;
+    font-size:22px;
+    margin:0 10px;
+}
+
+/* APPROVAL TEXT */
+.approval-text{
+    font-size:12px;
+    font-weight:600;
+    line-height:1.2;
+    margin-top:2px;
+}
+
+/* ADDRESS */
+.address{
+    font-weight:800;
+    font-size:18px;
+    margin-top:2px;
+}
+
+/* RIGHT SECTION */
+.logo-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+}
+
+.small-logo{
+    height:55px;          /* reduced logo size */
+    margin:0 -3px;        /* tight spacing */
+}
+
+.counselling-label{
+    font-size:15px;
+    color:#2f3b8f;
+    font-weight:600;
+    text-align:center;
+}
+
+.counselling-code{
+    font-size:26px;
+    font-weight:900;
+    color:#2f3b8f;
+    text-align:center;
+}
+
+/* Responsive */
+@media (max-width:992px){
+
+    .header-section{
+        height:auto;
+        padding:15px 10px;
+    }
+
+    .college-name{
+        font-size:28px;
+        white-space:normal;
+    }
+
+    .autonomous{
+        font-size:16px;
+    }
+
+    .approval-text{
+        display:none;   /* hide approval on small screens */
+    }
+
+    .address{
+        font-size:14px;
+    }
+
+    .small-logo{
+        height:38px;
+        margin:0 -2px;
+    }
+}
